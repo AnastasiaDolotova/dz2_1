@@ -16,6 +16,6 @@ void createTelephone(FILE *db);
 void printDate(telephone *t);
 void printTelephone(telephone &t);
 void printTelephones(FILE *db);
-void deleteTelephone(FILE *db, char *name);
+FILE* deleteTelephone(FILE *db, char *name);
 
 #endif //DZ2_1_TELEPHONE_H

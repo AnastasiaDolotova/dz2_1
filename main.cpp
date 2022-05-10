@@ -68,13 +68,15 @@ int main() {
                         system("cls");
                         createTelephone(db);
                         std::cout << "Telephone was successfully added!" << std::endl;
+                        printTelephones(db);
                         getch();
                         break;
                     }
                     case 2: {
                         system("cls");
-                        deleteTelephone(db, name);
+                        db = deleteTelephone(db, name);
                         std::cout << "Telephone was successfully deleted!" << std::endl;
+                        printTelephones(db);
                         getch();
                         break;
                     }
@@ -84,7 +86,7 @@ int main() {
             case 4: {
                 system("cls");
                 std::cout << "Choose action:" << std::endl;
-                std::cout << "1 - whether the specified telephones produced in this country is there"
+                std::cout << "1 - specified telephones produced in your country"
                           << std::endl;
                 std::cout << "2 - how many telephones you can buy with your money" << std::endl;
                 std::cout << "3 - total amount of telephones received, starting from the specified date"
